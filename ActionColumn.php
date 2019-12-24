@@ -7,11 +7,11 @@ use yii\helpers\Url;
 class ActionColumn extends \yii\grid\ActionColumn
 {
 
-	public $contentOptions = ['style' => 'width: 1%; white-space: nowrap;'];
+    public $contentOptions = ['style' => 'width: 1%; white-space: nowrap;'];
 
     public $options = ['style' => 'width: 1%'];
 
-	public $baseUrl;
+    public $baseUrl;
     
     public function createUrl($action, $model, $key, $index)
     {
