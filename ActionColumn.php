@@ -31,10 +31,7 @@ class ActionColumn extends \yii\grid\ActionColumn
             $params[0] = $this->controller ? $this->controller . '/' . $action : $action;   
         }
         
-        if ($action != 'delete')
-        {
-            $params['returnUrl'] = Url::current();
-        }
+        $params['returnUrl'] = Url::current();
        
         return Url::toRoute($params); 
     }
