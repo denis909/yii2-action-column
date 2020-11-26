@@ -70,9 +70,12 @@ class ActionColumn extends \yii\grid\ActionColumn
         {
             $params[0] = $this->controller ? $this->controller . '/' . $action : $action;   
         }
-        
-        $params['returnUrl'] = Url::current();
-       
+
+        if ($action != 'view')
+        {
+            $params['returnUrl'] = Url::current();
+        }
+
         return Url::toRoute($params); 
     }
 
